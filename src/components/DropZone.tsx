@@ -94,13 +94,13 @@ export default function DropZone({ onUploadSuccess, onError }: DropZoneProps) {
     setTempFileSize(file.size);
     setIsUploading(true);
     setUploadProgress(0);
-    setStatusMessage('Reading file content...');
+    setStatusMessage('Reading image content...');
 
     const reader = new FileReader();
     reader.onload = async (event) => {
       const rawDataUrl = event.target?.result as string;
       if (!rawDataUrl) {
-        setErrorMessage('Failed to read file.');
+        setErrorMessage('Failed to read image.');
         setIsUploading(false);
         return;
       }
@@ -144,7 +144,7 @@ export default function DropZone({ onUploadSuccess, onError }: DropZoneProps) {
     };
 
     reader.onerror = () => {
-      setErrorMessage('Error reading file.');
+      setErrorMessage('Error reading image.');
       setIsUploading(false);
     };
 
@@ -246,7 +246,7 @@ export default function DropZone({ onUploadSuccess, onError }: DropZoneProps) {
                   {isDragActive ? 'Drop to absorb droplet' : 'Ready to upload?'}
                 </h2>
                 <p className="text-sm text-slate-400 font-sans leading-relaxed">
-                  Drag and drop your images here or <span className="text-sky-500 font-semibold underline cursor-pointer hover:text-sky-600 transition-colors">browse files</span>
+                  Drag and drop your images here or <span className="text-sky-500 font-semibold underline cursor-pointer hover:text-sky-600 transition-colors">browse images</span>
                 </p>
               </div>
 
@@ -330,7 +330,7 @@ export default function DropZone({ onUploadSuccess, onError }: DropZoneProps) {
             >
               <AlertCircle className="w-5 h-5 text-rose-500 shrink-0 mt-0.5 group-hover:animate-shake" />
               <div className="space-y-0.5">
-                <p className="text-sm font-semibold text-rose-800">Invalid File Type</p>
+                <p className="text-sm font-semibold text-rose-800">Invalid Image Type</p>
                 <p className="text-xs text-rose-600/90 leading-tight">
                   {errorMessage}
                 </p>

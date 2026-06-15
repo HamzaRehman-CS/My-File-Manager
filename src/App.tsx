@@ -59,7 +59,7 @@ export default function App() {
       localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updatedList));
     } catch (err: any) {
       if (err.name === 'QuotaExceededError' || err.code === 22) {
-        triggerToast('Database storage capacity reached. Please clear some files.', 'info');
+        triggerToast('Database storage capacity reached. Please clear some images.', 'info');
       } else {
         console.error('LocalStorage save error:', err);
       }
@@ -92,11 +92,11 @@ export default function App() {
         setActiveImage(null);
       }
     }
-    triggerToast('File dropped from storage', 'success');
+    triggerToast('Image removed from storage', 'success');
   };
 
   const handleClearAll = () => {
-    if (window.confirm('Are you sure you want to delete all stored files from the local catalog?')) {
+    if (window.confirm('Are you sure you want to delete all stored images from the local catalog?')) {
       setImages([]);
       localStorage.removeItem(LOCAL_STORAGE_KEY);
       setActiveImage(null);
@@ -129,10 +129,10 @@ export default function App() {
             
             <div className="text-center sm:text-left">
               <h1 className="text-3xl font-light text-slate-800 tracking-tight flex items-center justify-center sm:justify-start gap-1">
-                My File <span className="font-bold text-sky-600">Manager</span>
+                My Image <span className="font-bold text-sky-600">Manager</span>
               </h1>
               <p className="text-[10px] text-slate-500 font-bold tracking-widest mt-1 uppercase">
-                PRECISION FILE MANAGEMENT & GLASS REFRACTION
+                PRECISION IMAGE MANAGEMENT & GLASS REFRACTION
               </p>
             </div>
           </div>
@@ -183,7 +183,7 @@ export default function App() {
       {/* Standard Literal Human Footer */}
       <footer className="w-full text-center py-6 mt-8 z-10 pointer-events-none relative" id="literal-footer">
         <p className="text-xs text-slate-400/90 font-medium font-mono">
-          My File Manager • Created by Hamza Rehman
+          My Image Manager • Created by Hamza Rehman
         </p>
       </footer>
 

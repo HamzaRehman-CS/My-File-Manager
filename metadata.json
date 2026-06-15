@@ -1,6 +1,6 @@
 {
-  "name": "My File Manager",
-  "description": "An elegant, interactive single-screen drag-and-drop file uploader featuring realistic water-glass morphism styling, instant image previews, progress indicators, error checking, and persistent localStorage conservation.",
+  "name": "My Image Manager",
+  "description": "An elegant, interactive single-screen drag-and-drop image uploader featuring realistic water-glass morphism styling, instant image previews, progress indicators, error checking, and persistent localStorage conservation.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

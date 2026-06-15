@@ -168,7 +168,7 @@ export default function ActivePreviewFrame({ image, onClear }: ActivePreviewFram
               className="flex-1 flex items-center justify-center space-x-2 text-sm font-semibold py-3 px-4 rounded-2xl text-white bg-sky-600 hover:bg-sky-700 shadow-md shadow-sky-500/15 hover:shadow-lg hover:shadow-sky-500/25 active:scale-95 transition-all cursor-pointer"
             >
               <Download className="w-4 h-4" />
-              <span>Download File</span>
+              <span>Download Image</span>
             </a>
           </div>
 

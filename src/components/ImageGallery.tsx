@@ -46,7 +46,7 @@ export default function ImageGallery({
       <div className="flex justify-between items-center px-1">
         <div className="flex items-center space-x-2">
           <h3 className="text-sm font-bold text-slate-700 uppercase tracking-widest">
-            Recent Files
+            Recent Images
           </h3>
           <span className="text-[10px] bg-sky-100 text-sky-600 px-2 py-0.5 rounded-full font-bold">
             {images.length} TOTAL
