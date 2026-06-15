@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --animate-drop-float: drop-float 6s ease-in-out infinite;
+  --animate-drop-float-slow: drop-float 10s ease-in-out infinite;
+  --animate-drop-float-fast: drop-float 4s ease-in-out infinite;
+  --animate-liquid-wave: liquid-wave 4s ease-in-out infinite;
+  --animate-pulse-subtle: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-shimmer: shimmer 2s infinite;
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%) skewX(-12deg);
+    }
+    100% {
+      transform: translateX(100%) skewX(-12deg);
+    }
+  }
+
+  @keyframes drop-float {
+    0%, 100% {
+      transform: translateY(0px) scale(1);
+    }
+    50% {
+      transform: translateY(-8px) scale(1.02);
+    }
+  }
+
+  @keyframes liquid-wave {
+    0%, 100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+      border-radius: 30% 60% 70% 30% / 50% 60% 30% 60%;
+    }
+  }
+
+  @keyframes pulse-subtle {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.85;
+      transform: scale(0.98);
+    }
+  }
+}
+
+/* Custom Water Glass Utility Styles (Frosted Glass and Water Bead Morphic Design Theme) */
+.water-drop, .water-glass-card {
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 
+    inset 0 4px 6px rgba(255, 255, 255, 0.5),
+    inset 0 -4px 6px rgba(0, 0, 0, 0.04),
+    0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+.water-glass-droplet {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 
+    inset 0 6px 14px rgba(255, 255, 255, 0.5),
+    inset 0 -6px 10px rgba(0, 0, 0, 0.02),
+    0 10px 24px rgba(37, 99, 235, 0.12);
+}
+
+.bead-button, .water-glass-button {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    inset 2px 2px 4px rgba(255, 255, 255, 0.82),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.04),
+    4px 4px 10px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bead-button:hover, .water-glass-button:hover {
+  background: rgba(255, 255, 255, 0.45);
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 
+    inset 2px 2px 5px rgba(255, 255, 255, 0.9),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.05),
+    6px 6px 14px rgba(0, 0, 0, 0.09);
+  transform: translateY(-1px);
+}
+
+.bead-button:active, .water-glass-button:active {
+  transform: translateY(1px);
+  box-shadow: 
+    inset 1px 1px 2px rgba(255, 255, 255, 0.6),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.02),
+    2px 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.drop-zone-glow {
+  background: radial-gradient(circle at center, rgba(56, 189, 248, 0.08) 0%, transparent 75%);
+}
+
+/* Scrollbar Customization for clean look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
